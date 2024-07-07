@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI视觉项目测试系统</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="upload-section">
+            <h1>AI视觉项目测试系统</h1>
+            <div class="controls">
+                <input type="file" id="imageInput" accept="image/*"/>
+                <input type="text" id="apiEndpoint" placeholder="输入测试API接口" />
+                <button id="uploadButton">上传</button>
+                <div id="labels" class="labels">标签: 无</div>
+            </div>
+            <div id="progressContainer" class="progress-container" style="position: relative;">
+                <div id="progressBar" class="progress-bar"></div>
+                <span class="contents" style="position: absolute; left: 450px; top: 10px; width: 100px;">无任务执行</span>
+            </div>
+        </div>
+        <div>
+            <h2>原始图像</h2>
+            <div class="image-section original">
+                <div class="image-container">
+                    <img id="originalImage" src="default.jpg" alt="原始图像" class="image"/>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2>处理后图像</h2>
+            <div class="image-section processed">
+                <div class="image-container">
+                    <img id="processedImage" src="default.jpg" alt="处理后图像" class="image"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
